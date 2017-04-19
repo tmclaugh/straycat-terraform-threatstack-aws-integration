@@ -32,7 +32,7 @@ data "terraform_remote_state" "root" {
 
 // Resources
 module "threatstack_aws_integration" {
-  source                        = "../tf_threatstack_aws_integration"
+  source                        = "github.com/threatstack/tf_threatstack_aws_integration"
   aws_account                   = "${var.aws_account}"
   aws_account_id                = "${data.terraform_remote_state.root.aws_account_id}"
   aws_region                    = "${var.aws_region}"
