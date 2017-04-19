@@ -5,7 +5,7 @@
 terraform {
   backend "s3" {
     encrypt = "true"
-    bucket  = "ts-demo-dev-terraform"
+    bucket  = "straycat-dhs-org-straycat-terraform"
     key     = "aws_cloudtrail_threatstack.tfstate"
     region  = "us-east-1"
   }
@@ -23,7 +23,7 @@ provider "aws" {
 data "terraform_remote_state" "root" {
   backend = "s3"
   config = {
-    bucket  = "${var.aws_account}-terraform"
+    bucket  = "straycat-dhs-org-${var.aws_account}-terraform"
     key     = "root.tfstate"
     region  = "${var.aws_region}"
   }
