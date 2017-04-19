@@ -13,7 +13,7 @@ variable "threatstack_external_id" {
 
 variable "aws_account" {
   type = "string"
-  description = "Used for naming S3 bucket in tf_example_aws_s3"
+  description = "Used for naming S3 bucket."
 }
 
 variable "aws_profile" {
@@ -23,6 +23,6 @@ variable "aws_profile" {
 
 variable "aws_region" {
   type = "string"
-  description = "Used for finding root state in tf_example_aws_s3"
+  description = "AWS region for trail."
 }
 
