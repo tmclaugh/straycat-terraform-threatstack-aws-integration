@@ -15,6 +15,10 @@ output "iam_role_cloudtrail_arn" {
   value = "${module.threatstack_aws_integration.iam_role_cloudtrail_arn}"
 }
 
+output "iam_role_cloudtrail_name" {
+  value = "${module.threatstack_aws_integration.iam_role_cloudtrail_name}"
+}
+
 output "cloudwatch_log_group_arn" {
   value = "${module.threatstack_aws_integration.cloudwatch_log_group_arn}"
 }
